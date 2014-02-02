@@ -1,0 +1,122 @@
+###########################################################
+#  ________                                               #
+#  ___  __/__   ____      ________ ___                    #
+#  __  /_ __ | / /_ | /| / /_  __ `__ \                   #
+#  _  __/ __ |/ /__ |/ |/ /_  / / / / /                   #
+#  /_/    _____/ ____/|__/ /_/ /_/ /_/                    #
+#  --------------------------------------                 #
+#  F? Virtual Desktop Manager                             #
+#                                                         #
+###########################################################
+
+# global settings
+# #########################################################
+SetEnv fvwm_base $[HOME]/.fvwm
+SetEnv fvwm_images $[fvwm_base]/images
+SetEnv fvwm_themes $[fvwm_base]/themes
+
+SetEnv fvwm_theme_termlike $[fvwm_themes]/termlike
+ImagePath $[fvwm_theme_termlike]/decorations/:+:$[FVWM_USERDIR]/icons
+
+Read $[fvwm_base]/functions
+
+# auto start programs
+# #########################################################
+DestroyFunc StartFunction
+AddToFunc StartFunction
++ I Module FvwmAnimate
++ I Module FvwmButtons
++ I Exec exec xrdb ~/.Xresources &
++ I Exec exec xcompmgr -n &
++ I Exec exec feh --bg-scale $[fvwm_images]/debian.png &
++ I Test (X conky) Exec exec conky -o -d &
++ I Exec exec fcitx -r -d &
++ I Test (X tint2) Exec exec tint2 &
++ I Test (X wicd-gtk) Exec exec wicd-gtk -t &
+
+
+# general settings
+# ----------------
+IgnoreModifiers 2L
+OpaqueMoveSize unlimited
+Style * ResizeOpaque
+Style * IndexedWindowName
+Style * !Icon
+Stype * !IconTitle
+HideGeometryWindow
+
+# Virtual Desktops
+# #########################################################
+#
+DesktopSize 2x2
+DesktopName 0 Main
+DesktopName 1 Work
+
+Style EdgeScroll 100 100
+Style EdgeResistance 150 150
+Style EdgeThickness 1
+
+# for tint2
+Test (X tint2) EwmhBaseStruts 1 1 1 28
+
+# fonts
+# -----
+Stype "*" Font "xft:terminus:size=10"
+
+# window
+# ------
+# Click to focus
+ClickTime 350
+MoveThreshold 3
+Style * ClickToFocus, MouseFocusClickRaises
+# windows decorations
+Read $[fvwm_theme_termlike]/menu_style
+Read $[fvwm_theme_termlike]/titlebar
+Read $[fvwm_theme_termlike]/window_decor
+
+# Menus
+# -----
+DestroyMenu RootMenu
+AddToMenu RootMenu
++ "&Gvim" Exec exec gvim
++ "&Emacs" Exec exec env LANG=zh_CN.UTF-8 emacs
+Test (X chromium) + "&Chromium" Exec exec chromium
++ "&Iceweasel" Exec exec iceweasel
++ "&Terminual" Exec exec urxvt
++ "&Xterm" Exec exec xterm
++ "" Nop
+Test (f /etc/X11/fvwm/menudefs.hook) + "&Debian" Popup /Debian
++ "&Restart" Restart
++ "&Quit" Quit
+
+
+# key bindings
+# ------------
+Key F4 W 1  delete
+Key Tab A 1 WindowList NoGeometry CurrentAtEnd
+Test (X gmrun) Key F2 A 1 Exec exec gmrun
+Test (X xfrun4) Key F2 A 1 Exec exec xfrun4
+
+Key e A 4 Exec exec env LC_CTYPE=zh_CN.UTF-8 emacs
+Key g A 4 Exec exec gvim
+Test (X xfe) Key t A 4 Exec exec xfe
+Test (X thunar) Key t A 4 Exec exec thunar
+Test (X chromium) Key c A 4 Exec exec chromium
+Key r A 4 Exec exec xterm
+Key i A 4 Exec exec iceweasel
+Key u A 4 Exec exec urxvt
+
+Key F10 W 1 Maximize 100 100
+Key F9 W 1 Resize
+Key F8 W 1 Iconfiy
+
+Key d A 4 ShowDesktop
+
+Mouse 1 R A Menu RootMenu
+
+# programs settings
+# -----------------
+Style chromium !Title, !Borders
+Style xfrun4  !Title
+Style gmrun !Title
+Style tint2 !Title, !Borders

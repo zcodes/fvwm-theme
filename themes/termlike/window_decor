@@ -40,7 +40,7 @@
 #  first and make window title left
 #  aligned (also optional)
 
-TitleStyle Height 16
+TitleStyle Height 18
 TitleStyle LeftJustified
 
 #  Now that we know what height the titlebar
@@ -93,7 +93,7 @@ Colorset 9 bg #4a5a8d
 #  and inactive windows:
 
 Style "*" HilightFore #387c48
-Style "*" Color #4a5a8d
+#Style "*" Color #4a5a8d
 
 #  Get rid of 3d everywhere - if
 #  it's not done, we will have our

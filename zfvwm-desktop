@@ -1,0 +1,52 @@
+###########################################################
+#  ________                                               #
+#  ___  __/__   ____      ________ ___                    #
+#  __  /_ __ | / /_ | /| / /_  __ `__ \                   #
+#  _  __/ __ |/ /__ |/ |/ /_  / / / / /                   #
+#  /_/    _____/ ____/|__/ /_/ /_/ /_/                    #
+#  --------------------------------------                 #
+#  F? Virtual Desktop Manager                             #
+#                                                         #
+###########################################################
+#
+# 虚拟桌面
+#
+# 桌面大小
+DesktopSize 2x2
+# 桌面标签
+DesktopName 0 Main
+DesktopName 1 Work
+
+# 禁用鼠标切换分页和桌面
+EdgeResistance -1
+EdgeThickness 0
+
+
+# 显示桌面
+DestroyFunc ShowDesktop
+AddToFunc ShowDesktop
++ I All (CurrentPage, Iconic, State 1) RestoreDesktop
++ I TestRc (Match) Break
++ I All (CurrentPage, !Iconic, !State 1) ThisWindow State 1 True
++ I All (CurrentPage, !Iconic, State 1) Iconify
+
+
+# 恢复桌面
+DestroyFunc RestoreDesktop
+AddToFunc RestoreDesktop
++ I All (CurrentPage, Iconic, State 1) Iconify off
++ I All (CurrentPage, State 1) ThisWindow State 1 False
+
+# 去除格子
+HideGeometryWindow
+
+# 图标设置
+Style ** Icon debian.png, IconOverride, MiniIcon debian.png, EWMHMiniIconOverride
+Style * !IconTitle
+
+Style "xterm" Icon xterm.png, MiniIcon xterm.png
+Style "chromium" Icon chrome.png, MiniIcon chrome.png
+Style "emacs" Icon emacs.png, MiniIcon emacs.png
+Style "gvim" Icon vim.png, MiniIcon vim.png
+Style "urxvt" Icon urxvt.png, MiniIcon urxvt.png
+Style "VirtualBox" Icon vbox.png, MiniIcon vbox.png

@@ -22,7 +22,7 @@ Colorset 7 fg #d5a30e
 MenuStyle * MenuColorset 3
 MenuStyle * ActiveColorset 7
 
-#  purge 3D 
+#  purge 3D
 
 MenuStyle * SeparatorsLong, TrianglesSolid
 MenuStyle * BorderWidth 2
@@ -33,5 +33,4 @@ MenuStyle * ActiveFore, Hilight3DOff
 MenuStyle * PopupAsSubmenu, HoldSubmenus, SubmenusRight
 MenuStyle "*" PopupOffset 2 100
 
-#  only works with patched
 

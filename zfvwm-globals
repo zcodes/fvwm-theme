@@ -1,0 +1,19 @@
+###########################################################
+#  ________                                               #
+#  ___  __/__   ____      ________ ___                    #
+#  __  /_ __ | / /_ | /| / /_  __ `__ \                   #
+#  _  __/ __ |/ /__ |/ |/ /_  / / / / /                   #
+#  /_/    _____/ ____/|__/ /_/ /_/ /_/                    #
+#  --------------------------------------                 #
+#  F? Virtual Desktop Manager                             #
+#                                                         #
+###########################################################
+#
+# fvwm 全局设置
+#
+# 变量
+SetEnv fvwm_base $[HOME]/.fvwm
+SetEnv fvwm_images $[fvwm_base]/images
+SetEnv fvwm_themes $[fvwm_base]/themes
+SetEnv fvwm_theme_termlike $[fvwm_themes]/termlike
+ImagePath $[fvwm_theme_termlike]/decorations/:+:$[fvwm_base]/icons

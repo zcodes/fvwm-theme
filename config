@@ -15,13 +15,14 @@ Read zfvwm-font
 Read zfvwm-menu
 Read zfvwm-desktop
 Read zfvwm-keys
+Read zfvwm-programs
+Read zfvwm-pager
 
 # general settings
 # ----------------
 IgnoreModifiers 2L
 OpaqueMoveSize unlimited
 Style * ResizeOpaque
-#Style * IndexedWindowName
 
 
 # window
@@ -33,11 +34,5 @@ Style * ClickToFocus, MouseFocusClickRaises
 # windows decorations
 Read $[fvwm_theme_termlike]/titlebar
 Read $[fvwm_theme_termlike]/window_decor
+Read $[fvwm_theme_termlike]/menu_style
 
-# programs settings
-# -----------------
-Style chromium !Title, !Borders
-Style xfrun4  !Title
-Style gmrun !Title
-Style tint2 !Title, !Borders
-Style razor-panel !Title, !Borders

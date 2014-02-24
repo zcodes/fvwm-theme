@@ -8,7 +8,12 @@
 #  F? Virtual Desktop Manager                             #
 #                                                         #
 ###########################################################
-
-# fvwm fonts
-Style * Font "xft:WenQuanYi Micro Hei Mono:size=10;encoding=iso10646-1:directions=C"
-MenuStyle * Font "xft:WenQuanYi Micro Hei Mono:size=10:encoding=iso10646-1:directions=C"
+#
+# 特定程序设置
+Style chromium !Title, !Borders
+Style xfrun4  !Title
+Style gmrun !Title
+Style tint2 !Title, !Borders
+Style razor-panel !Title, !Borders
+Style conky !Title, !Borders, StaysOnBottom, Sticky
+Style stalonetray !Title, !Borders, StaysOnBottom, Sticky

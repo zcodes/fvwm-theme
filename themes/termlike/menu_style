@@ -11,11 +11,13 @@
 
 #  fg - text, bg - background, the rest is for borders
 
-Colorset 3 fg #cccccc, bg #2E3436, sh #387c48, hi #387c48
+Colorset 1 RootTransparent buffer
+colorset 2 RootTransparent buffer
+Colorset 3 RootTransparent,fg #44cc44, bg #2E3436, sh #387c48, hi #387c48
 
 #  selected item highligt:
 
-Colorset 7 fg #d5a30e
+Colorset 7 RootTransparent,fg #4A5A8D
 
 #  enable colorsets
 

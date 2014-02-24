@@ -8,7 +8,15 @@
 #  F? Virtual Desktop Manager                             #
 #                                                         #
 ###########################################################
+#
+#
+Module FvwmPager *
 
-# fvwm fonts
-Style * Font "xft:WenQuanYi Micro Hei Mono:size=10;encoding=iso10646-1:directions=C"
-MenuStyle * Font "xft:WenQuanYi Micro Hei Mono:size=10:encoding=iso10646-1:directions=C"
+*FvwmPager: font none
+*FvwmPager: Colorset * 1
+*FvwmPager: HighlightColorset * 3
+*FvwmPager: WindowColorsets 2 3
+*FvwmPager: Geometry 260x172-0+0
+*FvwmPager: NoSeparators
+
+Style FvwmPager !Title, !Borders, StaysOnBottom, Sticky

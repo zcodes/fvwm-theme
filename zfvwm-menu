@@ -15,6 +15,7 @@
 DestroyMenu RootMenu
 AddToMenu RootMenu
 + "&Gvim" Exec exec gvim
+# 确保emacs可以使用中文输入法
 + "&Emacs" Exec exec env LANG=zh_CN.UTF-8 emacs
 Test (X chromium) + "&Chromium" Exec exec chromium
 + "&Iceweasel" Exec exec iceweasel
@@ -25,8 +26,16 @@ Test (X chromium) + "&Chromium" Exec exec chromium
 + "" Nop
 + "&Restart" Restart
 + "&Quit" Quit
-
+# 关机和重启命令
+# 这里使用的是sudo + shutdown 命令来关机和重启
+# sudo配置(<user>是指可以关机的用户名):
+# 编辑/etc/sudoers文件，添加:
+# <user> ALL = NOPASSWD: /sbin/shutodown
++ "" Nop
++ "Reboot" Exec exec sudo shutdown -r now
++ "&Halt" Exec exec  sudo shutdown -h now
 # Binding Root Menu
+
 Mouse 1 R A Menu RootMenu
 
 # Menu Style

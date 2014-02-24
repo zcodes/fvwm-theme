@@ -11,7 +11,7 @@
 # key bindings
 #
 Key F4 W 1  delete
-Key Tab A 1 WindowList NoGeometry CurrentAtEnd
+Key Tab A 1 WindowList NoGeometry NoSticky CurrentAtEnd
 Test (X gmrun) Key F2 A 1 Exec exec gmrun
 Test (X xfrun4) Key F2 A 1 Exec exec xfrun4
 
@@ -29,3 +29,8 @@ Key F9 W 1 Resize
 Key F8 W 1 Iconfiy
 
 Key d A 4 ShowDesktop
+key F1 A C GotoPage 0 0
+Key F2 A C GotoPage 1 0
+Key F3 A C GotoPage 0 1
+Key F4 A C GotoPage 1 1
+

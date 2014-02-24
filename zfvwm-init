@@ -21,7 +21,7 @@ DestroyFunc InitFunction
 AddToFunc InitFunction
 + I Exec exec xrdb ~/.Xresources &
 + I Test (X feh) Exec exec feh --bg-scale $[fvwm_images]/debian.png &
-#+ I Test (X conky) Exec exec conky -d &
++ I Test (X conky) Exec exec conky -d &
 + I Exec exec fcitx -r -d &
 + I Exec exec xcompmgr -c &
 #

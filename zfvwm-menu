@@ -23,17 +23,18 @@ Test (X chromium) + "&Chromium" Exec exec chromium
 + "&Xterm" Exec exec xterm
 + "" Nop
 + "&VirtualBox" Exec exec VirtualBox
++ "Icedove" Exec exec icedove
 + "" Nop
-+ "&Restart" Restart
-+ "&Quit" Quit
++ "&Restart Fvwm" Restart
++ "&Quit Fvwm" Quit
 # 关机和重启命令
 # 这里使用的是sudo + shutdown 命令来关机和重启
 # sudo配置(<user>是指可以关机的用户名):
 # 编辑/etc/sudoers文件，添加:
 # <user> ALL = NOPASSWD: /sbin/shutodown
 + "" Nop
-+ "Reboot" Exec exec sudo shutdown -r now
-+ "&Halt" Exec exec  sudo shutdown -h now
++ "重启" Exec exec sudo shutdown -r now
++ "关机" Exec exec  sudo shutdown -h now
 # Binding Root Menu
 
 Mouse 1 R A Menu RootMenu

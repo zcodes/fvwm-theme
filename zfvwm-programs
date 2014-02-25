@@ -16,4 +16,4 @@ Style gmrun !Title
 Style tint2 !Title, !Borders
 Style razor-panel !Title, !Borders
 Style conky !Title, !Borders, StaysOnBottom, Sticky
-Style stalonetray !Title, !Borders, StaysOnBottom, Sticky
+Style trayer !Title, !Borders, StaysOnBottom, Sticky

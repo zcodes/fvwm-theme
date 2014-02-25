@@ -21,3 +21,4 @@ Style "gvim" Icon vim.png, MiniIcon vim.png
 Style "urxvt" Icon term.png, MiniIcon term.png
 Style "VirtualBox" Icon vbox.png, MiniIcon vbox.png
 Style "thunar" Icon thunar.png, MiniIcon thunar.png
+Style "Icedove" Icon mail.png, MiniIcon mail.png

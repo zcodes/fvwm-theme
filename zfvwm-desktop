@@ -40,15 +40,6 @@ AddToFunc RestoreDesktop
 # 去除格子
 HideGeometryWindow
 
-# 图标设置
-Style ** Icon debian.png, IconOverride, MiniIcon debian.png, EWMHMiniIconOverride
-Style * !IconTitle
-
-Style "Iceweasel" Icon iceweasel.png, MiniIcon iceweasel.png
-Style "xterm" Icon term.png, MiniIcon term.png
-Style "chromium" Icon chrome.png, MiniIcon chrome.png
-Style "emacs" Icon emacs.png, MiniIcon emacs.png
-Style "gvim" Icon vim.png, MiniIcon vim.png
-Style "urxvt" Icon term.png, MiniIcon term.png
-Style "VirtualBox" Icon vbox.png, MiniIcon vbox.png
-Style "thunar" Icon thunar.png, MiniIcon thunar.png
+# WindowList Fixed
+AddToFunc WindowListFunc
++ I WarpToWindow 50 50

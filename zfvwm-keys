@@ -34,3 +34,14 @@ Key F2 A C GotoPage 1 0
 Key F3 A C GotoPage 0 1
 Key F4 A C GotoPage 1 1
 
+
+Key Up   	W 4 Move w  0
+Key Down 	W 4 Move w  -0
+Key Left 	W 4 Move 0  w
+Key Right 	w 4 Move -0 w
+
+
+Key 1 W 4 PointerWindow MoveToPage 0 0
+Key 2 W 4 PointerWindow MoveToPage 1 0
+Key 3 W 4 PointerWindow MoveToPage 0 1
+Key 4 W 4 PointerWindow MoveToPage 1 1

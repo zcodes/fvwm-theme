@@ -8,32 +8,16 @@
 #  F? Virtual Desktop Manager                             #
 #                                                         #
 ###########################################################
-# fvwm 的根配置文件, 加载各个配置模块
-Read zfvwm-globals
-Read zfvwm-init
-Read zfvwm-font
-Read zfvwm-menu
-Read zfvwm-desktop
-Read zfvwm-keys
-Read zfvwm-programs
-Read zfvwm-pager
-Read zfvwm-icons
+#
+# 图标设置
+Style ** Icon debian.png, IconOverride, MiniIcon debian.png, EWMHMiniIconOverride
+Style * !IconTitle
 
-# general settings
-# ----------------
-IgnoreModifiers 2L
-OpaqueMoveSize unlimited
-Style * ResizeOpaque
-
-
-# window
-# ------
-# Click to focus
-ClickTime 350
-MoveThreshold 3
-Style * ClickToFocus, MouseFocusClickRaises
-# windows decorations
-Read $[fvwm_theme_termlike]/titlebar
-Read $[fvwm_theme_termlike]/window_decor
-Read $[fvwm_theme_termlike]/menu_style
-
+Style "Iceweasel" Icon iceweasel.png, MiniIcon iceweasel.png
+Style "xterm" Icon term.png, MiniIcon term.png
+Style "chromium" Icon chrome.png, MiniIcon chrome.png
+Style "emacs" Icon emacs.png, MiniIcon emacs.png
+Style "gvim" Icon vim.png, MiniIcon vim.png
+Style "urxvt" Icon term.png, MiniIcon term.png
+Style "VirtualBox" Icon vbox.png, MiniIcon vbox.png
+Style "thunar" Icon thunar.png, MiniIcon thunar.png

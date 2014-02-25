@@ -25,17 +25,8 @@ EdgeThickness 0
 # 显示桌面
 DestroyFunc ShowDesktop
 AddToFunc ShowDesktop
-+ I All (CurrentPage, Iconic, State 1) RestoreDesktop
-+ I TestRc (Match) Break
-+ I All (CurrentPage, !Iconic, !State 1) ThisWindow State 1 True
-+ I All (CurrentPage, !Iconic, !Sticky, State 1) Iconify
++ I All (CurrentPage, !Iconic, !Sticky) Iconify
 
-
-# 恢复桌面
-DestroyFunc RestoreDesktop
-AddToFunc RestoreDesktop
-+ I All (CurrentPage, Iconic, State 1) Iconify off
-+ I All (CurrentPage, State 1) ThisWindow State 1 False
 
 # 去除格子
 HideGeometryWindow

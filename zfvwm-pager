@@ -18,5 +18,6 @@ Module FvwmPager *
 *FvwmPager: WindowColorsets 2 3
 *FvwmPager: Geometry 260x172-0+0
 *FvwmPager: NoSeparators
+*FvwmPager: UseSkipList
 
-Style FvwmPager !Title, !Borders, StaysOnBottom, Sticky
+Style FvwmPager !Title, !Borders, StaysOnBottom, Sticky, WindowListSkip

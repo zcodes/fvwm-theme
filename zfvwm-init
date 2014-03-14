@@ -24,13 +24,17 @@ AddToFunc InitFunction
 + I Test (X feh) Exec exec feh --bg-scale $[fvwm_images]/debian.png &
 + I Test (X conky) Exec exec conky -d &
 + I Test (X trayer) Exec exec trayer --edge bottom --align right --widthtype request --transparent true &
-+ I Test (X stardict) Exec exec stardict -h &
-+ I Test (X fcitx) Exec exec fcitx -r -d &
++ I Test (X fcitx) Exec exec fcitx -r -d
 + I Test (X wicd-gtk) Exec exec wicd-gtk -t &
++ I Test (X stardict) Exec exec stardict -h &
+#+ I Module FvwmAnimate
+#+ I Module FvwmTaskBar
 #
 #
-# DestroyFunc RestartFunction
-# AddToFunc RestartFunction
+#DestroyFunc RestartFunction
+#AddToFunc RestartFunction
+#+ I Module FvwmTaskBar
+#+ I Module FvwmAnimate
 #
 #
 # DestroyFunc SessionInitFunction

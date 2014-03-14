@@ -11,6 +11,25 @@
 
 # fvwm menus
 #
+# Fvwm Menu
+DestroyMenu FvwmMenu
+AddToMenu FvwmMenu
++ "&Restart" Restart
++ "&Quit" Quit
+
+
+DestroyMenu SystemMenu
+AddToMenu SystemMenu
+# 关机和重启命令
+# 这里使用的是sudo + shutdown 命令来关机和重启
+# sudo配置(<user>是指可以关机的用户名):
+# 编辑/etc/sudoers文件，添加:
+# <user> ALL = NOPASSWD: /sbin/shutodown
++ "&Reboot" Exec exec sudo shutdown -r now
++ "&Shutdown" Exec exec  sudo shutdown -h now
+
+
+# Binding Root Menu
 # Root Menu
 DestroyMenu RootMenu
 AddToMenu RootMenu
@@ -25,53 +44,21 @@ Test (X chromium) + "&Chromium" Exec exec chromium
 + "&VirtualBox" Exec exec VirtualBox
 + "Icedove" Exec exec icedove
 + "" Nop
-+ "&Restart Fvwm" Restart
-+ "&Quit Fvwm" Quit
-# 关机和重启命令
-# 这里使用的是sudo + shutdown 命令来关机和重启
-# sudo配置(<user>是指可以关机的用户名):
-# 编辑/etc/sudoers文件，添加:
-# <user> ALL = NOPASSWD: /sbin/shutodown
-+ "" Nop
-+ "重启" Exec exec sudo shutdown -r now
-+ "关机" Exec exec  sudo shutdown -h now
-# Binding Root Menu
++ "&Fvwm" Popup FvwmMenu
++ "&System" Popup SystemMenu
 
 Mouse 1 R A Menu RootMenu
 
-# Menu Style
-#  IMPORTANT! Colorset numeration
-#  convention given in manuals is:
-#    0 = Default colors
-#    1 = Inactive windows
-#    2 = Active windows
-#    3 = Inactive menu entry and menu background
-#    4 = Active menu entry
-#    5 = greyed out menu entry (only bg used)
-#    6 = module foreground and background
-#    7 = hilight colors
-#  fg - text, bg - background, the rest is for borders
-
 Colorset 3 fg #44cc44, bg #2E3436, sh #387c48, hi #387c48
-
-#  selected item highligt:
-
 Colorset 7 fg #d5a30e
-
-#  enable colorsets
-
 MenuStyle * MenuColorset 3
 MenuStyle * ActiveColorset 7
 
-#  purge 3D
-
 MenuStyle * SeparatorsLong, TrianglesSolid
-MenuStyle * BorderWidth 2
+MenuStyle * BorderWidth 1
 MenuStyle * ActiveFore, Hilight3DOff
 
-#  other nice things
-
 MenuStyle * PopupAsSubmenu, HoldSubmenus, SubmenusRight
-MenuStyle "*" PopupOffset 2 100
+MenuStyle "*" PopupOffset 1 100
 
 

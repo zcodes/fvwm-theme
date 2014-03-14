@@ -8,6 +8,7 @@
 #  F? Virtual Desktop Manager                             #
 #                                                         #
 ###########################################################
+#
 # fvwm 的根配置文件, 加载各个配置模块
 Read zfvwm-globals
 Read zfvwm-init
@@ -18,6 +19,8 @@ Read zfvwm-keys
 Read zfvwm-programs
 Read zfvwm-pager
 Read zfvwm-icons
+Read zfvwm-animate
+#Read zfvwm-taskbar
 
 # general settings
 # ----------------

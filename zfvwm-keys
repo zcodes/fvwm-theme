@@ -8,6 +8,7 @@
 #  F? Virtual Desktop Manager                             #
 #                                                         #
 ###########################################################
+#
 # key bindings
 #
 Key F4 W 1  delete
@@ -45,3 +46,6 @@ Key 1 W 4 PointerWindow MoveToPage 0 0
 Key 2 W 4 PointerWindow MoveToPage 1 0
 Key 3 W 4 PointerWindow MoveToPage 0 1
 Key 4 W 4 PointerWindow MoveToPage 1 1
+
+
+Key F3 A 4 Module FvwmConsole

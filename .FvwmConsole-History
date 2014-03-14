@@ -1,0 +1,29 @@
+Moudle FvwmAnimate
+Module FvwmAnimate
+Module FvwmAnimate
+Module FvwmTaskBar
+Style FvwmTaskBar !Title, !Border
+Module FvwmButtons
+Module FvwmBanner
+Module FvwmBanner
+Module FvwmBanner
+Echo "hello"
+Module FvwmIconBox
+Module FvwmIconMan
+Module FvwmButtons
+Module FvwmTaskBar
+*FvwmTaskBar: Geometry +0-0
+*FvwmTaskBar: Fore 1
+*FvwmTaskBar: Back 2
+*FvwmTaskBar: AutoStick
+*FvwmTaskBar: AutoFocus
+*FvwmTaskBar: ColorSet 1
+*FvwmTaskBar: Back #c3c3c3
++ I *FvwmTaskBar: Back #c3c3c3
+*FvwmTaskBar: Fore black
+*FvwmTaskBar: ButtonWidth 180
+*FvwmTaskBar: ButtonWidth 100
+FvwmTaskBar
+FvwmTaskBar
+Module FvwmAnimate
+Module FvwmAnimate

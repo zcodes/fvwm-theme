@@ -1,0 +1,16 @@
+Style "FvwmTaskBar" NoTitle, BorderWidth 1, HandleWidth 1, StaysOnTop, Sticky, WindowListSkip, CirculateSkip, NoIcon
+
+AddToFunc DeiconifyRaiseAndFocus
++ I Iconify off
++ I Raise
++ I Focus
+
+*FvwmTaskBar: Action Click1 DeiconifyRaiseAndFocus
+*FvwmTaskBar: Action Click2 Iconify on
+*FvwmTaskBar: Action Click3 Lower
+*FvwmTaskBar: UseSkipList
+*FvwmTaskBar: PageOnly
+*FvwmTaskBar: ColorSet 3
+*FvwmTaskBar: IconColorSet 2
+*FvwmTaskBar: AutoStick
+*FvwmTaskBar: AutoHide
